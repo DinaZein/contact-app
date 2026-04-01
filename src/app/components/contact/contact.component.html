@@ -1,22 +1,52 @@
 <h2>Contact App</h2>
 
 <!-- Add Contact -->
+<form #contactForm="ngForm">
+  <!-- Name field -->
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="newContact.name" name="name" required #nameRef="ngModel">
+    <mat-error *ngIf="nameRef.invalid && nameRef.touched">Name is required</mat-error>
+  </mat-form-field>
+
 <mat-form-field>
-  <input matInput placeholder="Name" [(ngModel)]="newContact.name">
+  <input
+    matInput
+    placeholder="Email"
+    [(ngModel)]="newContact.email"
+    name="email"
+    required
+    email
+    #emailRef="ngModel"
+  >
+  <mat-error *ngIf="emailRef.invalid && emailRef.touched">
+    Please enter a valid email
+  </mat-error>
 </mat-form-field>
 
 <mat-form-field>
-  <input matInput placeholder="Email" [(ngModel)]="newContact.email">
+  <input
+    matInput
+    placeholder="Phone"
+    [(ngModel)]="newContact.phone"
+    name="phone"
+    required
+    pattern="^[0-9]{8,15}$"
+    #phoneRef="ngModel"
+  >
+  <mat-error *ngIf="phoneRef.invalid && phoneRef.touched">
+    Phone must be 8-15 digits
+  </mat-error>
 </mat-form-field>
 
-<mat-form-field>
-  <input matInput placeholder="Phone" [(ngModel)]="newContact.phone">
-</mat-form-field>
-
-<button mat-raised-button color="primary" (click)="addContact()" style="margin-left: 10px;">
-  Add Contact
-</button>
-
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="addContact()"
+    [disabled]="contactForm.invalid"
+  >
+    Add Contact
+  </button>
+</form>
 <!-- Search -->
  <div>
 <mat-form-field>
