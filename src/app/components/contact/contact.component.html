@@ -50,11 +50,11 @@
 <!-- Search -->
  <div>
 <mat-form-field>
-  <input matInput placeholder="Search by name or email" [(ngModel)]="searchTerm" (input)="search()">
+  <input matInput placeholder="Search by name" [(ngModel)]="searchTerm">
 </mat-form-field>
 </div>
 <!-- Table -->
-<table mat-table [dataSource]="filteredContacts">
+<table mat-table [dataSource]="contacts | contactFilter: searchTerm">
 
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Name</th>

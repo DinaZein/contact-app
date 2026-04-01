@@ -12,12 +12,14 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EditContactDialogComponent } from './components/edit-contact-dialog/edit-contact-dialog.component';
+import { ContactFilterPipe } from './pipes/contact-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    EditContactDialogComponent
+    EditContactDialogComponent,
+    ContactFilterPipe, 
   ],
   imports: [
     BrowserModule,

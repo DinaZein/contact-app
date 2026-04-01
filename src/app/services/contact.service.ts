@@ -30,10 +30,10 @@ export class ContactService {
     }
   }
 
-  searchContact(term: string): Contact[] {
-    return this.contacts.filter(c =>
-      c.name.toLowerCase().includes(term.toLowerCase()) ||
-      c.email.toLowerCase().includes(term.toLowerCase())
-    );
-  }
+  // searchContact(term: string): Contact[] {
+  //   return this.contacts.filter(c =>
+  //     c.name.toLowerCase().includes(term.toLowerCase()) ||
+  //     c.email.toLowerCase().includes(term.toLowerCase())
+  //   );
+  // }
 }

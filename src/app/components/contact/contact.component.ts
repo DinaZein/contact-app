@@ -44,13 +44,13 @@ loadContacts() {
     this.loadContacts();
   }
 
-  search() {
-    if (!this.searchTerm) {
-      this.filteredContacts = this.contacts;
-    } else {
-      this.filteredContacts = this.contactService.searchContact(this.searchTerm);
-    }
-  }
+  // search() {
+  //   if (!this.searchTerm) {
+  //     this.filteredContacts = this.contacts;
+  //   } else {
+  //     this.filteredContacts = this.contactService.searchContact(this.searchTerm);
+  //   }
+  // }
   editContact(contact: Contact) {
   const dialogRef = this.dialog.open(EditContactDialogComponent, {
     width: '400px',
