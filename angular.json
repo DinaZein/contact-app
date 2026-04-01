@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "contact-app:build:production"
+              "browserTarget": "contact-app:build:production"
             },
             "development": {
-              "buildTarget": "contact-app:build:development"
+              "browserTarget": "contact-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "contact-app:build"
+            "browserTarget": "contact-app:build"
           }
         },
         "test": {
