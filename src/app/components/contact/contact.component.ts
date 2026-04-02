@@ -4,8 +4,9 @@ import { Contact } from 'src/app/models/contact';
 import { MatDialog } from '@angular/material/dialog';
 import { EditContactDialogComponent } from '../edit-contact-dialog/edit-contact-dialog.component';
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    standalone: false
 })
 export class ContactComponent implements OnInit {
 

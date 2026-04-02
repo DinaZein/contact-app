@@ -2,8 +2,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Contact } from 'src/app/models/contact';
 
 @Component({
-  selector: 'app-contact-detail',
-  templateUrl: './contact-detail.component.html',
+    selector: 'app-contact-detail',
+    templateUrl: './contact-detail.component.html',
+    standalone: false
 })
 export class ContactDetailComponent {
 
