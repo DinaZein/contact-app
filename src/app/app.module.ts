@@ -13,13 +13,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EditContactDialogComponent } from './components/edit-contact-dialog/edit-contact-dialog.component';
 import { ContactFilterPipe } from './pipes/contact-filter.pipe';
-
+import { ContactDetailComponent } from './components/contact-detail/contact-detail.component';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     EditContactDialogComponent,
     ContactFilterPipe, 
+    ContactDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { ContactFilterPipe } from './pipes/contact-filter.pipe';
     MatButtonModule,
     MatFormFieldModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

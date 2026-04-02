@@ -56,7 +56,6 @@ loadContacts() {
     width: '400px',
     data: { ...contact }
   });
-
   dialogRef.afterClosed().subscribe(result => {
     if (result) {
       this.contactService.updateContact(result);
@@ -64,4 +63,5 @@ loadContacts() {
     }
   });
 }
+
 }

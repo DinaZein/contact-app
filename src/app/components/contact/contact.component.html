@@ -54,7 +54,7 @@
 </mat-form-field>
 </div>
 <!-- Table -->
-<table mat-table [dataSource]="contacts | contactFilter: searchTerm">
+<!-- <table mat-table [dataSource]="contacts | contactFilter: searchTerm">
 
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Name</th>
@@ -85,5 +85,12 @@
 
   <tr mat-header-row *matHeaderRowDef="['name','email','phone','actions']"></tr>
   <tr mat-row *matRowDef="let row; columns: ['name','email','phone','actions'];"></tr>
-
-</table>
+</table> -->
+<div class="contact-list">
+  <app-contact-detail
+    *ngFor="let contact of contacts | contactFilter: searchTerm"
+    [contact]="contact"
+    (delete)="deleteContact($event)"
+    (edit)="editContact($event)">
+  </app-contact-detail>
+</div>
